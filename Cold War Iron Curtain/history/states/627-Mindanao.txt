@@ -1,10 +1,9 @@
 state = {
 	id = 627
 	name = "STATE_627"
-	manpower = 4449644	
+	manpower = 4449644
 	state_category = pop4dev1
 	resources = {
-		chromium = 7
 		oil = 2
 	}
 	history = {
@@ -23,18 +22,18 @@ state = {
 			}
 		}
 		victory_points = {
-			4241 5 
+			4241 5
 		}
 		add_core_of = PHI
 		set_state_flag = HDI3
 		set_variable = { tourism_infrastructure = 0 }
-		
-		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 420 } 				
-		add_to_array = { culture = 422 } 
-		add_to_array = { culture = 421 } 
 
-		##RELIGIONS##			
+		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
+		add_to_array = { culture = 420 }
+		add_to_array = { culture = 422 }
+		add_to_array = { culture = 421 }
+
+		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
 		#Christian#
 		set_variable = { ReligionChristianityCatholic = 65 }
@@ -76,11 +75,11 @@ state = {
 		set_variable = { ReligionOther = 0 }
 
 		1960.1.1 = {
-			add_manpower = 1841420				
+			add_manpower = 1841420
             set_state_category = pop5dev1
 		}
-		1973.1.1 = {	
-			add_manpower = 3054086		
+		1973.1.1 = {
+			add_manpower = 3054086
 		}
 		1980.1.1 = {
 			add_manpower = 1996057
@@ -95,6 +94,6 @@ state = {
 	}
 
 	provinces = {
-		1234 1293 1379 1407 1421 4241 4266 4399 4427 7284 7360 7389 7417 7445 10184 10214 10243 10300 10328 12116 12158 12160 12188 12217 12245 12273 
+		1234 1293 1379 1407 1421 4241 4266 4399 4427 7284 7360 7389 7417 7445 10184 10214 10243 10300 10328 12116 12158 12160 12188 12217 12245 12273
 	}
 }

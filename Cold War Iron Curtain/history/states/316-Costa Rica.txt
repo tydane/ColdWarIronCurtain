@@ -2,9 +2,6 @@
 state={
 	id=316
 	name="STATE_316"
-	resources={
-		chromium=6.000
-	}
 
 	history={
 		owner = COS
@@ -23,7 +20,7 @@ state={
 		}
 		add_core_of = COS
 		victory_points = {
-			12878 4 
+			12878 4
 		}
 
 		set_variable = { coal_amount = 0 }
@@ -32,10 +29,10 @@ state={
 		set_variable = { tourism_infrastructure = 0 }
 
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 416 } 	
-        add_to_array = { culture = 238 } 	
-		
-		##RELIGIONS##			
+		add_to_array = { culture = 416 }
+        add_to_array = { culture = 238 }
+
+		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
 		#Christian#
 		set_variable = { ReligionChristianityCatholic = 90 }
@@ -78,7 +75,7 @@ state={
 
 
 		1960.1.1 = {
-			add_manpower = 241080			
+			add_manpower = 241080
 		}
 		1973.1.1 = {
 			add_manpower = 414257
@@ -96,7 +93,7 @@ state={
 	provinces={
 		12878 15770 15771 15773
 	}
-	manpower=592012	
+	manpower=592012
 	buildings_max_level_factor=1.000
 	state_category=pop1dev1
 }

@@ -4,7 +4,6 @@ state = {
 	resources = {
 		tungsten = 25.000
 		steel = 6.000
-		chromium = 5.000
 	}
 	history={
 		owner = LOS
@@ -30,10 +29,10 @@ state = {
 		set_variable = { tourism_infrastructure = 0 }
 
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 417 } 		 
+		add_to_array = { culture = 417 }
 		add_to_array = { culture = 281 }
 		add_to_array = { culture = 243 }
-		
+
 		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
 		#Christian#
@@ -76,7 +75,7 @@ state = {
 		set_variable = { ReligionOther = 0 }
 
 		1960.1.1 = {
-			add_manpower = 56709				
+			add_manpower = 56709
 		}
 		1973.1.1 = {
 			add_manpower = 103375
@@ -92,9 +91,9 @@ state = {
 	}
 
 	provinces={
-		4568 7103 12392 12433 13738 13741 13743 13744 13745 13746 
+		4568 7103 12392 12433 13738 13741 13743 13744 13745 13746
 	}
-	manpower=217902	
+	manpower=217902
 	buildings_max_level_factor=1.000
 	state_category=pop1
 }

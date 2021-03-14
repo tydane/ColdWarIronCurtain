@@ -3,7 +3,6 @@ state={
 	id=786
 	name="STATE_786"
 	resources={
-		chromium=8.000
 		steel=20.000
 	}
 
@@ -24,10 +23,10 @@ state={
 
 		}
 		victory_points = {
-			4075 20 
+			4075 20
 		}
 		victory_points = {
-			4119 10 
+			4119 10
 		}
 		buildings = {
 			infrastructure = 1
@@ -69,13 +68,13 @@ state={
 		add_extra_state_shared_building_slots = 6
 		set_state_flag = HDI3
 		set_variable = { tourism_infrastructure = 0 }
-		
-		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 242 } 				
-		add_to_array = { culture = 246 } 
-		add_to_array = { culture = 247 } 
 
-		##RELIGIONS##			
+		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
+		add_to_array = { culture = 242 }
+		add_to_array = { culture = 246 }
+		add_to_array = { culture = 247 }
+
+		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
 		#Christian#
 		set_variable = { ReligionChristianityCatholic = 15 }
@@ -117,10 +116,10 @@ state={
 		set_variable = { ReligionOther = 0 }
 
 		1960.1.1 = {
-			add_manpower = 1689582				
+			add_manpower = 1689582
 		}
-		1973.1.1 = {	
-			add_manpower = 2995080		
+		1973.1.1 = {
+			add_manpower = 2995080
 			set_state_category = pop10dev2
 		}
 		1980.1.1 = {
@@ -135,9 +134,9 @@ state={
 	}
 
 	provinces={
-		1185 4075 4119 12048 13753 13755 13756 13770 13772 
+		1185 4075 4119 12048 13753 13755 13756 13770 13772
 	}
-	manpower=5333032	
+	manpower=5333032
 	buildings_max_level_factor=1.000
 	state_category=pop5dev2
 }

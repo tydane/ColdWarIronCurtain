@@ -4,7 +4,6 @@ state = {
 	resources = {
 		oil = 16.000
 		steel = 4.000
-		chromium = 55
 	}
 
 	history = {
@@ -14,7 +13,7 @@ state = {
 		set_state_flag = large
 		set_state_flag = verypoor
 		victory_points = {
-			4389 1 
+			4389 1
 		}
 		buildings = {
 			infrastructure = 0
@@ -31,10 +30,10 @@ state = {
 		}
 		set_state_flag = HDI3
 		set_variable = { tourism_infrastructure = 0 }
-		
+
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-        add_to_array = { culture = 178 } 
-        add_to_array = { culture = 172 }		
+        add_to_array = { culture = 178 }
+        add_to_array = { culture = 172 }
         add_to_array = { culture = 179 }
         add_to_array = { culture = 183 }
 
@@ -80,11 +79,11 @@ state = {
 		set_variable = { ReligionOther = 0 }
 
 		1960.1.1 = {
-			add_manpower = 211113							
+			add_manpower = 211113
 			set_state_category = pop1dev2
 		}
-		1973.1.1 = {	
-			add_manpower = 244228		
+		1973.1.1 = {
+			add_manpower = 244228
 			set_state_category = pop1dev3
 		}
 		1980.1.1 = {
@@ -93,15 +92,15 @@ state = {
 		}
 		1991.1.1 = {
 			add_manpower = 103031
-			
+
 		}
 
 	}
 
 	provinces = {
-		1239 1243 1312 1382 1402 4250 4277 4389 4492 4595 7335 7392 7405 7407 7425 7600 7657 10179 10220 10268 10275 10277 10292 10452 10508 12111 12121 12177 12194 12329 12385 12487 
+		1239 1243 1312 1382 1402 4250 4277 4389 4492 4595 7335 7392 7405 7407 7425 7600 7657 10179 10220 10268 10275 10277 10292 10452 10508 12111 12121 12177 12194 12329 12385 12487
 	}
-	manpower = 437896	
+	manpower = 437896
 	buildings_max_level_factor = 1.000
 	state_category = pop1dev1
 }

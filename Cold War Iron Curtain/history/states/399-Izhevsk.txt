@@ -3,7 +3,6 @@ state = {
 	id = 399
 	name = "STATE_399"
 	resources = {
-		chromium = 24.000
 		oil = 25.000
 		steel = 3.000
 	}
@@ -24,9 +23,9 @@ state = {
 		add_core_of = SOV
 		set_state_flag = HDI3
 		set_variable = { tourism_infrastructure = 0 }
-		
+
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-        add_to_array = { culture = 178 }			
+        add_to_array = { culture = 178 }
 		add_to_array = { culture = 400 }
 		add_to_array = { culture = 390 }
 
@@ -72,11 +71,11 @@ state = {
 		set_variable = { ReligionOther = 0 }
 
 		1960.1.1 = {
-			add_manpower = 179337								
+			add_manpower = 179337
 			set_state_category = pop1dev2
 		}
-		1973.1.1 = {	
-			add_manpower = 130293		
+		1973.1.1 = {
+			add_manpower = 130293
 			set_state_category = pop1dev3
 		}
 		1980.1.1 = {
@@ -85,15 +84,15 @@ state = {
 		}
 		1991.1.1 = {
 			add_manpower = 104436
-			
+
 		}
 
 	}
 
 	provinces = {
-		305 370 381 3027 3270 3294 3300 4356 4400 6217 6278 6297 6388 7359 7403 9293 11320 11365 12203 12244 
+		305 370 381 3027 3270 3294 3300 4356 4400 6217 6278 6297 6388 7359 7403 9293 11320 11365 12203 12244
 	}
-	manpower = 1079808	
+	manpower = 1079808
 	buildings_max_level_factor = 1.000
 	state_category = pop1dev1
 }

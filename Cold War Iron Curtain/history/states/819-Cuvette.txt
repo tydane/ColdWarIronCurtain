@@ -6,7 +6,6 @@ state = {
 		steel = 5.000
 		aluminium = 3.000
 		tungsten = 3.000
-		chromium = 2.000
 	}
 
 	history = {
@@ -24,7 +23,7 @@ state = {
 
 		}
 		victory_points = {
-			14693 1 
+			14693 1
 		}
 		victory_points = {
 			14696 2
@@ -34,9 +33,9 @@ state = {
 		}
 		set_state_flag = HDI2
 		set_variable = { tourism_infrastructure = 0 }
-		
-		add_to_array = { culture = 95 } 		
-		add_to_array = { culture = 77 } 
+
+		add_to_array = { culture = 95 }
+		add_to_array = { culture = 77 }
 
 		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
@@ -80,11 +79,11 @@ state = {
 		set_variable = { ReligionOther = 0 }
 
 		1960.1.1 = {
-			add_manpower = 12760			
+			add_manpower = 12760
 		}
-		1973.1.1 = {	
-			add_manpower = 26699		
-			set_state_category = pop1dev1	
+		1973.1.1 = {
+			add_manpower = 26699
+			set_state_category = pop1dev1
 		}
 		1980.1.1 = {
 			add_manpower = 21866
@@ -112,7 +111,7 @@ state = {
 		14695
 		14697
 	}
-	manpower = 50052	
+	manpower = 50052
 	buildings_max_level_factor = 1.000
 	state_category = pop1
 }

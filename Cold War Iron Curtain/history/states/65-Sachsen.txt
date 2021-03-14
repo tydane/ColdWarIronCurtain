@@ -4,6 +4,7 @@ state = {
 	resources = {
 		steel = 27.000
 		aluminium = 24.000
+		chromium = 2
 	}
 
 	history = {
@@ -20,9 +21,9 @@ state = {
 			industrial_complex = 2
 			agri_industrial_complex = 2
 			office_park = 2
-			
+
 			fossil_fuel_powerplant = 1
-			
+
 			air_base = 1
 		}
 		1990.10.3 = {
@@ -30,10 +31,10 @@ state = {
 		}
 
 		victory_points = {
-			3514 1 
+			3514 1
 		}
 		victory_points = {
-			514 11 
+			514 11
 		}
 		add_core_of = WGR
 		add_core_of = DDR
@@ -42,8 +43,8 @@ state = {
 		set_variable = { tourism_infrastructure = 0 }
 
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 426 } 
-		add_to_array = { culture = 135 } 
+		add_to_array = { culture = 426 }
+		add_to_array = { culture = 135 }
 
 		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
@@ -90,7 +91,7 @@ state = {
 			add_manpower = -96000
 		}
 		1973.1.1 = {
-			add_manpower = -29300			
+			add_manpower = -29300
 			set_variable = { ReligionChristianityCatholic = 7 }
 			set_variable = { ReligionChristianityProtestant = 50 }
 			set_variable = { ReligionAtheist = 43 }
@@ -99,7 +100,7 @@ state = {
 	}
 
 	provinces = {
-		3514 573 514 6559 
+		3514 573 514 6559
 	}
 	manpower = 1981200
 	buildings_max_level_factor = 1.000

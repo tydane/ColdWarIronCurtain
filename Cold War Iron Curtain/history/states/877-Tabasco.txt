@@ -3,7 +3,6 @@ state = {
 	id = 877
 	name = "STATE_877"
 	resources = {
-		chromium = 5.000
 		tungsten = 8.000
 	}
 
@@ -26,9 +25,9 @@ state = {
 		set_variable = { tourism_infrastructure = 0 }
 
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 233 } 	
-        add_to_array = { culture = 234 } 		
-        	 
+		add_to_array = { culture = 233 }
+        add_to_array = { culture = 234 }
+
 		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
 		#Christian#
@@ -71,7 +70,7 @@ state = {
 		set_variable = { ReligionOther = 0 }
 
 		1960.1.1 = {
-			add_manpower = 194938			
+			add_manpower = 194938
 		}
 		1973.1.1 = {
 			add_manpower = 368017
@@ -87,9 +86,9 @@ state = {
 	}
 
 	provinces = {
-		12867 13420 
+		12867 13420
 	}
-	manpower = 554326	
+	manpower = 554326
 	buildings_max_level_factor = 1.000
 	state_category = pop1dev1
 }

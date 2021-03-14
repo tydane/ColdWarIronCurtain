@@ -2,7 +2,6 @@ state = {
 	id = 499
 	name = "STATE_499"
 	resources = {
-		chromium = 32.000
 		oil = 6.000
 	}
 
@@ -21,11 +20,11 @@ state = {
 			industrial_complex = 1
 			agri_industrial_complex = 3
 			office_park = 1
-			
+
 			fossil_fuel_powerplant = 1
-			
+
 			air_base = 2
-			
+
 			10946 = {
 				naval_base = 1
 			}
@@ -35,7 +34,7 @@ state = {
 		}
 		add_core_of = BRA
 		victory_points = {
-			10946 1 
+			10946 1
 		}
 		set_variable = { coal_amount = 0 }
 
@@ -43,9 +42,9 @@ state = {
 		set_variable = { tourism_infrastructure = 0 }
 
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 230 } 	
-        add_to_array = { culture = 238 } 	
-        	 
+		add_to_array = { culture = 230 }
+        add_to_array = { culture = 238 }
+
 		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
 		#Christian#
@@ -88,7 +87,7 @@ state = {
 		set_variable = { ReligionOther = 0 }
 
 		1960.1.1 = {
-			add_manpower = 1288415			
+			add_manpower = 1288415
 			set_state_category = pop5dev2
 		}
 		1973.1.1 = {
@@ -106,9 +105,9 @@ state = {
 	}
 
 	provinces = {
-		4617 5174 5194 5218 8129 8177 8184 8197 8242 10392 10419 10926 10946 11002 12422 
+		4617 5174 5194 5218 8129 8177 8184 8197 8242 10392 10419 10926 10946 11002 12422
 	}
-	manpower = 3820036	
+	manpower = 3820036
 	buildings_max_level_factor = 1.000
 	state_category = pop4dev1
 }

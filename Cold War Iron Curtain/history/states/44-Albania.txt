@@ -4,7 +4,6 @@ state = {
 	resources = {
 		steel = 2.000
 		aluminium = 4.000
-		chromium = 6.000
 	}
 
 	history = {
@@ -14,7 +13,7 @@ state = {
 		set_state_flag = small
 		set_state_flag = semideveloped
 		victory_points = {
-			9914 5 
+			9914 5
 		}
 		buildings = {
 			infrastructure = 2
@@ -23,9 +22,9 @@ state = {
 			arms_factory = 1
 			industrial_complex = 2
 			agri_industrial_complex = 1
-			
+
 			fossil_fuel_powerplant = 1
-			
+
 			air_base = 2
 			9914 = {
 				naval_base = 3
@@ -34,9 +33,9 @@ state = {
 		add_core_of = ALB
 		set_state_flag = HDI3
 		set_variable = { tourism_infrastructure = 0 }
-		
+
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 51 } 		
+		add_to_array = { culture = 51 }
 
 		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
@@ -81,9 +80,9 @@ state = {
 		1960.1.1 = {
 			add_manpower = 190400
 		}
-		1973.1.1 = {	
-			add_manpower = 393859	
-            
+		1973.1.1 = {
+			add_manpower = 393859
+
 		}
 		1980.1.1 = {
 			add_manpower = 212117
@@ -95,13 +94,13 @@ state = {
 
 	}
 
-	provinces = {			
+	provinces = {
 		9914
 		15638
 		3884
 		15636
 	}
-	manpower = 714044				
+	manpower = 714044
 	buildings_max_level_factor = 1.000
 	state_category = pop1dev2
 }

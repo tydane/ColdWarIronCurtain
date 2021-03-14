@@ -5,7 +5,6 @@ state={
 	resources={
 		tungsten=8.000
 		oil=60.000
-		chromium=2.000
 	}
 
 	history={
@@ -24,9 +23,9 @@ state={
 		add_core_of = SPR
 		set_state_flag = HDI3
 		set_variable = { tourism_infrastructure = 0 }
-		
+
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 148 } 		
+		add_to_array = { culture = 148 }
 
 		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
@@ -71,7 +70,7 @@ state={
 		1960.1.1 = {
 			add_manpower = 62851
 		}
-		1973.1.1 = {	
+		1973.1.1 = {
 			add_manpower = 107520
             set_state_category = pop1dev2
 		}
@@ -87,9 +86,9 @@ state={
 	}
 
 	provinces={
-		858 888 896 3891 3945 3986 6879 9757 9785 9852 9881 9933 11742 11820 11863 
+		858 888 896 3891 3945 3986 6879 9757 9785 9852 9881 9933 11742 11820 11863
 	}
-	manpower=716907				
+	manpower=716907
 	buildings_max_level_factor=1.000
 	state_category=pop1dev1
 }

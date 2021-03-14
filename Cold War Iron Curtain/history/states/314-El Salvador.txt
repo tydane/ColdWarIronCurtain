@@ -2,9 +2,6 @@ state = {
 	id = 314
 	name = "STATE_314"
 	
-	resources = {
-		chromium = 1
-	}
 	history = {
 		owner = ELS
 		set_state_flag = tropical
@@ -14,15 +11,15 @@ state = {
 		buildings = {
 			infrastructure = 1
 			state_infrastructure = 0
-			
+
 			industrial_complex = 2
 			arms_factory = 1
 			agri_industrial_complex = 1
-			
+
 			fossil_fuel_powerplant = 1
-			
+
 			air_base = 2
-			
+
 			12823 = {
 				naval_base = 1
 			}
@@ -37,9 +34,9 @@ state = {
 		set_variable = { tourism_infrastructure = 0 }
 
 		#1st is majority. Up to 3 minorities below. First is Majority, Next 3 are minorities, largest to smallest
-		add_to_array = { culture = 416 } 		 
-		
-		##RELIGIONS##	
+		add_to_array = { culture = 416 }
+
+		##RELIGIONS##
 		#Note: These don't need to add up to anything, simple ratios will do
 		#Christian#
 		set_variable = { ReligionChristianityCatholic = 90 }
@@ -97,9 +94,9 @@ state = {
 			set_state_category = pop5dev2
 		}
 	}
-	provinces = {				
-		12823 15783 15787 15788 15786 
+	provinces = {
+		12823 15783 15787 15788 15786
 	}
-	manpower = 1742597	
+	manpower = 1742597
 	state_category = pop1dev1
 }
