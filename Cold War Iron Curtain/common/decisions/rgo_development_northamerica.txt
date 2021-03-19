@@ -886,10 +886,13 @@ prospect_for_resources = {
 			375 = {state_infrastructure > 2}
 		}
 		visible = {
-			has_tech = civil_engineering_III
+			has_tech = civil_engineering_II
 			owns_state = 375
 			controls_state = 375
-			375 = { NOT = { has_state_flag = chromium_texas_developed } }
+			375 = {
+				has_state_flag = petrochemicals_texas_I_developed
+				NOT = { has_state_flag = chromium_texas_developed }
+			}
 		}
 
 		ai_will_do = {factor = 1}
@@ -2650,7 +2653,6 @@ prospect_for_resources = {
 			380 = {state_infrastructure > 0}
 		}
 		visible = {
-			has_tech = civil_engineering_I
 			owns_state = 380
 			controls_state = 380
 			380 = { NOT = { has_state_flag = chromium_utah_I_developed } }
@@ -2694,7 +2696,7 @@ prospect_for_resources = {
 			}
 		}
 		visible = {
-			has_tech = excavation_I
+			has_tech = civil_engineering_II
 			owns_state = 380
 			controls_state = 380
 			380 = {
@@ -2781,7 +2783,7 @@ prospect_for_resources = {
 			381 = {state_infrastructure > 1}
 		}
 		visible = {
-			has_tech = excavation_I
+			has_tech = civil_engineering_II
 			owns_state = 381
 			controls_state = 381
 			381 = { NOT = { has_state_flag = chromium_wyoming_I_developed } }
@@ -2825,7 +2827,7 @@ prospect_for_resources = {
 			}
 		}
 		visible = {
-			has_tech = civil_engineering_III
+			has_tech = civil_engineering_II
 			owns_state = 381
 			controls_state = 381
 			381 = {
@@ -2882,7 +2884,6 @@ prospect_for_resources = {
 			owns_state = 381
 			controls_state = 381
 			381 = {
-				state_infrastructure > 1
 				NOT = {
 					has_state_flag = {
 						flag = petrochemicals_wyoming_I_developed
@@ -3037,7 +3038,7 @@ prospect_for_resources = {
 			390 = {state_infrastructure > 1}
 		}
 		visible = {
-			has_tech = excavation_I
+			has_tech = civil_engineering_II
 			owns_state = 390
 			controls_state = 390
 			390 = { NOT = { has_state_flag = chromium_south_dakota_developed } }
