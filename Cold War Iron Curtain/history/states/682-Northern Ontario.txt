@@ -78,9 +78,25 @@ state = {
 		set_variable = { ReligionFurry = 0 }
 		set_variable = { ReligionOther = 0 }
 
+		1956.1.1 = {
+			set_state_flag = chromium_ontario_I_developed
+			add_resource = {
+				type = chromium
+				amount = 20
+			}
+			buildings = {state_infrastructure = 2}
+		}
 		1960.1.1 = {
 			add_manpower = 1450012
 			set_state_category = pop5dev2
+		}
+		1961.1.1 = {
+			set_state_flag = chromium_ontario_II_developed
+			add_resource = {
+				type = chromium
+				amount = 20
+			}
+			buildings = {state_infrastructure = 3}
 		}
 		1973.1.1 = {
 			add_manpower = 1609994

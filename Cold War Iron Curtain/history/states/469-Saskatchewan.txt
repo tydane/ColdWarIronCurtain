@@ -79,9 +79,32 @@ state = {
 		set_variable = { ReligionFurry = 0 }
 		set_variable = { ReligionOther = 0 }
 
+		1950.1.1 = {
+			set_state_flag = chromium_saskatchewan_I_developed
+			add_resource = {
+				type = chromium
+				amount = 13
+			}
+		}
+		1956.1.1 = {
+			set_state_flag = chromium_saskatchewan_II_developed
+			add_resource = {
+				type = chromium
+				amount = 54
+			}
+			buildings = {state_infrastructure = 2}
+		}
 		1960.1.1 = {
 			add_manpower = 127448
 			set_state_category = pop1dev2
+		}
+		1961.1.1 = {
+			set_state_flag = chromium_saskatchewan_III_developed
+			add_resource = {
+				type = chromium
+				amount = 90
+			}
+			buildings = {state_infrastructure = 3}
 		}
 		1973.1.1 = {
 			add_manpower = 141509
