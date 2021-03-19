@@ -82,6 +82,13 @@ state = {
 		set_variable = { ReligionChineseSalvationist = 0 }
 		set_variable = { ReligionMessianic = 0 }
 		set_variable = { ReligionOther = 5 }
+		1956.6.1 = {
+			set_state_flag = chromium_arizona_developed
+			add_resource = {
+				type = chromium
+				amount = 7
+			}
+		}
 		1960.1.1 = {
 			add_manpower = 552600
 		}

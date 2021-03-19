@@ -82,6 +82,22 @@ state = {
 		set_variable = { ReligionChineseSalvationist = 0 }
 		set_variable = { ReligionMessianic = 0 }
 		set_variable = { ReligionOther = 3 }
+		1953.10.1 = {
+			set_state_flag = chromium_new_mexico_I_developed
+			add_resource = {
+				type = chromium
+				amount = 13
+			}
+			buildings = {state_infrastructure = 2}
+		}
+		1958.2.1 = {
+			set_state_flag = chromium_new_mexico_II_developed
+			add_resource = {
+				type = chromium
+				amount = 64
+			}
+			buildings = {state_infrastructure = 3}
+		}
 		1960.1.1 = {
 			add_manpower = 269800
 			set_state_category = pop1dev2

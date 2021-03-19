@@ -2667,7 +2667,7 @@ prospect_for_resources = {
 				set_state_flag = chromium_utah_I_developed
 				add_resource = {
 					type = chromium
-					amount = 12
+					amount = 11
 				}
 			}
 		}

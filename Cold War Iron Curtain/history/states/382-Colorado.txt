@@ -82,8 +82,39 @@ state = {
 		set_variable = { ReligionChineseSalvationist = 0 }
 		set_variable = { ReligionMessianic = 0 }
 		set_variable = { ReligionOther = 5 }
+		1950.1.1 = {
+			set_state_flag = chromium_colorado_I_developed
+			add_resource = {
+				type = chromium
+				amount = 4
+			}
+		}
+		1951.6.1 = {
+			set_state_flag = chromium_colorado_II_developed
+			add_resource = {
+				type = chromium
+				amount = 9
+			}
+			buildings = {state_infrastructure = 2}
+		}
+		1956.1.1 = {
+			set_state_flag = chromium_colorado_III_developed
+			add_resource = {
+				type = chromium
+				amount = 28
+			}
+			buildings = {state_infrastructure = 3}
+		}
 		1960.1.1 = {
 			add_manpower = 428800
+		}
+		1961.1.1 = {
+			set_state_flag = chromium_colorado_IV_developed
+			add_resource = {
+				type = chromium
+				amount = 10
+			}
+			buildings = {state_infrastructure = 4}
 		}
 		1973.1.1 = {
 			add_manpower = 455700

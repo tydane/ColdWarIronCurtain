@@ -76,6 +76,21 @@ state = {
 		set_variable = { ReligionChineseSalvationist = 0 }
 		set_variable = { ReligionMessianic = 0 }
 		set_variable = { ReligionOther = 74 }
+		1951.5.1 = {
+			set_state_flag = chromium_utah_I_developed
+			add_resource = {
+				type = chromium
+				amount = 11
+			}
+		}
+		1957.10.1 = {
+			set_state_flag = chromium_utah_II_developed
+			add_resource = {
+				type = chromium
+				amount = 40
+			}
+			building = {state_infrastructure = 2}
+		}
 		1960.1.1 = {
 			add_manpower = 201700
 		}
