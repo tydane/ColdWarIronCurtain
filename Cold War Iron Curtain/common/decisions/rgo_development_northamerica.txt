@@ -570,10 +570,7 @@ prospect_for_resources = {
 			has_tech = civil_engineering_I
 			owns_state = 382
 			controls_state = 382
-			382 = {
-				state_infrastructure > 1
-				has_state_flag = chromium_colorado_I_developed
-			}
+			382 = {state_infrastructure > 1}
 		}
 		visible = {
 			owns_state = 382
@@ -616,10 +613,7 @@ prospect_for_resources = {
 			has_tech = excavation_I
 			owns_state = 382
 			controls_state = 382
-			382 = {
-				state_infrastructure > 2
-				has_state_flag = chromium_colorado_II_developed
-			}
+			382 = {state_infrastructure > 2}
 		}
 		visible = {
 			owns_state = 382
@@ -662,10 +656,7 @@ prospect_for_resources = {
 			has_tech = civil_engineering_III
 			owns_state = 382
 			controls_state = 382
-			382 = {
-				state_infrastructure > 3
-				has_state_flag = chromium_colorado_III_developed
-			}
+			382 = {state_infrastructure > 3}
 		}
 		visible = {
 			owns_state = 382
@@ -750,10 +741,7 @@ prospect_for_resources = {
 			has_tech = excavation_I
 			owns_state = 376
 			controls_state = 376
-			376 = {
-				state_infrastructure > 1
-				has_state_flag = chromium_new_mexico_I_developed
-			}
+			376 = {state_infrastructure > 1}
 		}
 		visible = {
 			owns_state = 376
@@ -2559,6 +2547,92 @@ prospect_for_resources = {
 			}
 		}
 	}
+##### ONTARIO #####
+	chromium_ontario_I_develop = {
+		icon = chromium
+
+		highlight_states = {state = 682}
+		available = {
+			has_tech = excavation_I
+			owns_state = 682
+			controls_state = 682
+			682 = {state_infrastructure > 1}
+		}
+		visible = {
+			has_tech = civil_engineering_II
+			owns_state = 682
+			controls_state = 682
+			682 = { NOT = { has_state_flag = chromium_ontario_I_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_ontario_I_develop_duration
+
+		remove_effect = {
+			682 = {
+				set_state_flag = chromium_ontario_I_developed
+				add_resource = {
+					type = chromium
+					amount = 20
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_ontario_I_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_ontario_I_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_ontario_II_develop = {
+		icon = chromium
+
+		highlight_states = {state = 682}
+		available = {
+			has_tech = civil_engineering_III
+			owns_state = 682
+			controls_state = 682
+			682 = {state_infrastructure > 2}
+		}
+		visible = {
+			has_tech = civil_engineering_II
+			owns_state = 682
+			controls_state = 682
+			682 = {
+				has_state_flag = chromium_ontario_I_developed
+				NOT = { has_state_flag = chromium_ontario_II_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_ontario_II_develop_duration
+
+		remove_effect = {
+			682 = {
+				set_state_flag = chromium_ontario_II_developed
+				add_resource = {
+					type = chromium
+					amount = 20
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_ontario_II_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_ontario_II_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
 ##### IDAHO #####
 	aluminium_idaho_I_develop = {
 
@@ -2641,6 +2715,135 @@ prospect_for_resources = {
 			}
 		}
 	}
+##### SASKATCHEWAN #####
+	chromium_saskatchewan_I_develop = {
+		icon = chromium
+
+		highlight_states = {state = 469}
+		available = {
+			has_tech = civil_engineering_I
+			owns_state = 469
+			controls_state = 469
+			469 = {state_infrastructure > 0}
+		}
+		visible = {
+			owns_state = 469
+			controls_state = 469
+			469 = { NOT = { has_state_flag = chromium_saskatchewan_I_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_saskatchewan_I_develop_duration
+
+		remove_effect = {
+			469 = {
+				set_state_flag = chromium_saskatchewan_I_developed
+				add_resource = {
+					type = chromium
+					amount = 13
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_saskatchewan_I_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_saskatchewan_I_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_saskatchewan_II_develop = {
+		icon = chromium
+
+		highlight_states = {state = 469}
+		available = {
+			has_tech = excavation_I
+			owns_state = 469
+			controls_state = 469
+			469 = {state_infrastructure > 1}
+		}
+		visible = {
+			has_tech = civil_engineering_I
+			owns_state = 469
+			controls_state = 469
+			469 = {
+				has_state_flag = chromium_saskatchewan_I_developed
+				NOT = { has_state_flag = chromium_saskatchewan_II_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_saskatchewan_II_develop_duration
+
+		remove_effect = {
+			469 = {
+				set_state_flag = chromium_saskatchewan_II_developed
+				add_resource = {
+					type = chromium
+					amount = 54
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierThree }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_saskatchewan_II_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_saskatchewan_II_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_saskatchewan_III_develop = {
+		icon = chromium
+
+		highlight_states = {state = 469}
+		available = {
+			has_tech = civil_engineering_III
+			owns_state = 469
+			controls_state = 469
+			469 = {state_infrastructure > 2}
+		}
+		visible = {
+			has_tech = civil_engineering_II
+			owns_state = 469
+			controls_state = 469
+			469 = {
+				has_state_flag = chromium_saskatchewan_II_developed
+				NOT = { has_state_flag = chromium_saskatchewan_III_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_saskatchewan_III_develop_duration
+
+		remove_effect = {
+			469 = {
+				set_state_flag = chromium_saskatchewan_III_developed
+				add_resource = {
+					type = chromium
+					amount = 90
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierFour }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_saskatchewan_III_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_saskatchewan_III_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
 ##### UTAH #####
 	chromium_utah_I_develop = {
 		icon = chromium
@@ -2690,10 +2893,7 @@ prospect_for_resources = {
 			has_tech = excavation_I
 			owns_state = 380
 			controls_state = 380
-			380 = {
-				has_state_flag = chromium_utah_I_developed
-				state_infrastructure > 1
-			}
+			380 = {state_infrastructure > 1}
 		}
 		visible = {
 			has_tech = civil_engineering_II
@@ -2821,10 +3021,7 @@ prospect_for_resources = {
 			has_tech = civil_engineering_III
 			owns_state = 381
 			controls_state = 381
-			381 = {
-				has_state_flag = chromium_wyoming_I_developed
-				state_infrastructure > 2
-			}
+			381 = {state_infrastructure > 2}
 		}
 		visible = {
 			has_tech = civil_engineering_II
