@@ -164,7 +164,6 @@ set_technology = {
 	iw_armored_vehicles = 1
 	light_tanks_1 = 1
 	light_tanks_2 = 1
-	light_tanks_3 = 1
 	main_battle_tanks = 1
 	main_battle_tanks_1 = 1
 	main_battle_tanks_2 = 1
@@ -1545,7 +1544,7 @@ create_equipment_variant = {
 		picture = "Leonid_Brezhnev.dds"
 		ideology = stalinism
 	}
-	load_focus_tree = SOV_Brezhnev
+	load_focus_tree = SOV_Brezhnevite
 	set_country_flag = focus_tree_73_reset
 }
 
