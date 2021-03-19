@@ -5,6 +5,47 @@ prospect_for_resources = {
 #############################################################
 
 ##### ARIZONA #####
+	chromium_arizona_develop = {
+		icon = chromium
+
+		highlight_states = {state = 377}
+		available = {
+			has_tech = excavation_I
+			owns_state = 377
+			controls_state = 377
+			377 = {state_infrastructure > 1}
+		}
+		visible = {
+			has_tech = civil_engineering_II
+			owns_state = 377
+			controls_state = 377
+			377 = { NOT = { has_state_flag = chromium_arizona_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_arizona_develop_duration
+
+		remove_effect = {
+			377 = {
+				set_state_flag = chromium_arizona_developed
+				add_resource = {
+					type = chromium
+					amount = 7
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_arizona_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_arizona_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
 
 	tungsten_arizona_I_develop = {
 		icon = tungsten
@@ -43,7 +84,7 @@ prospect_for_resources = {
 		complete_effect = {
 			subtract_from_variable = { currentMoney = global.RGOTierTwo } #Cost
 			clr_country_flag = AI_desire_tungsten #AI is satisfied
-			
+
 			#Construction Time Calculation#
 			set_temp_variable = { RGOConSpeedTemp = 1.03 }
 			add_to_temp_variable = { RGOConSpeedTemp = ROOT.RGOConSpeed } #RGO Construction Speed Variable
@@ -63,7 +104,7 @@ prospect_for_resources = {
 		}
 	}
 	steel_arizona_I_develop = {
-		
+
 		icon = steel
 
 		allowed = {
@@ -89,7 +130,7 @@ prospect_for_resources = {
 			has_tech = excavation_I
 			377 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_arizona_I_developed
 						value = 5
 					}
@@ -145,8 +186,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	steel_arizona_II_develop = { 
-		
+	steel_arizona_II_develop = {
+
 		icon = steel
 
 		allowed = {
@@ -174,7 +215,7 @@ prospect_for_resources = {
 			377 = {
 				has_state_flag = steel_arizona_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_arizona_II_developed
 						value = 5
 					}
@@ -230,8 +271,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	steel_arizona_III_develop = { 
-		
+	steel_arizona_III_develop = {
+
 		icon = steel
 
 		allowed = {
@@ -259,7 +300,7 @@ prospect_for_resources = {
 			377 = {
 				has_state_flag = steel_arizona_II_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_arizona_III_developed
 						value = 5
 					}
@@ -315,8 +356,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	steel_arizona_IV_develop = { 
-		
+	steel_arizona_IV_develop = {
+
 		icon = steel
 
 		allowed = {
@@ -343,7 +384,7 @@ prospect_for_resources = {
 			377 = {
 				has_state_flag = steel_arizona_II_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						value = 5
 					}
 				}
@@ -398,8 +439,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	steel_arizona_V_develop = { 
-		
+	steel_arizona_V_develop = {
+
 		icon = steel
 
 		allowed = {
@@ -425,7 +466,7 @@ prospect_for_resources = {
 			has_tech = excavation_I
 			377 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_arizona_V_developed
 						value = 5
 					}
@@ -481,9 +522,275 @@ prospect_for_resources = {
 			}
 		}
 	}
-##### MAGMA #####
-	steel_magma_I_develop = { 
-		
+##### COLORADO #####
+	chromium_colorado_I_develop = {
+		icon = chromium
+
+		highlight_states = {state = 382}
+		available = {
+			owns_state = 382
+			controls_state = 382
+			382 = {state_infrastructure > 0}
+		}
+		visible = {
+			owns_state = 382
+			controls_state = 382
+			382 = { NOT = { has_state_flag = chromium_colorado_I_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_colorado_I_develop_duration
+
+		remove_effect = {
+			382 = {
+				set_state_flag = chromium_colorado_I_developed
+				add_resource = {
+					type = chromium
+					amount = 4
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierOne }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_colorado_I_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_colorado_I_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_colorado_II_develop = {
+		icon = chromium
+
+		highlight_states = {state = 382}
+		available = {
+			has_tech = civil_engineering_I
+			owns_state = 382
+			controls_state = 382
+			382 = {
+				state_infrastructure > 1
+				has_state_flag = chromium_colorado_I_developed
+			}
+		}
+		visible = {
+			owns_state = 382
+			controls_state = 382
+			382 = {
+				has_state_flag = chromium_colorado_I_developed
+				NOT = { has_state_flag = chromium_colorado_II_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_colorado_II_develop_duration
+
+		remove_effect = {
+			382 = {
+				set_state_flag = chromium_colorado_II_developed
+				add_resource = {
+					type = chromium
+					amount = 9
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_colorado_II_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_colorado_II_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_colorado_III_develop = {
+		icon = chromium
+
+		highlight_states = {state = 382}
+		available = {
+			has_tech = excavation_I
+			owns_state = 382
+			controls_state = 382
+			382 = {
+				state_infrastructure > 2
+				has_state_flag = chromium_colorado_II_developed
+			}
+		}
+		visible = {
+			owns_state = 382
+			controls_state = 382
+			382 = {
+				has_state_flag = chromium_colorado_II_developed
+				NOT = { has_state_flag = chromium_colorado_III_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_colorado_III_develop_duration
+
+		remove_effect = {
+			382 = {
+				set_state_flag = chromium_colorado_III_developed
+				add_resource = {
+					type = chromium
+					amount = 28
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierThree }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_colorado_III_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_colorado_III_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_colorado_IV_develop = {
+		icon = chromium
+
+		highlight_states = {state = 382}
+		available = {
+			has_tech = civil_engineering_III
+			owns_state = 382
+			controls_state = 382
+			382 = {
+				state_infrastructure > 3
+				has_state_flag = chromium_colorado_III_developed
+			}
+		}
+		visible = {
+			owns_state = 382
+			controls_state = 382
+			382 = {
+				has_state_flag = chromium_colorado_III_developed
+				NOT = { has_state_flag = chromium_colorado_IV_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_colorado_IV_develop_duration
+
+		remove_effect = {
+			382 = {
+				set_state_flag = chromium_colorado_IV_developed
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_colorado_IV_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_colorado_IV_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+}
+##### NEW MEXICO & MAGMA #####
+	chromium_new_mexico_I_develop = {
+		icon = chromium
+
+		highlight_states = {state = 376}
+		available = {
+			has_tech = civil_engineering_I
+			owns_state = 376
+			controls_state = 376
+			376 = {state_infrastructure > 1}
+		}
+		visible = {
+			owns_state = 376
+			controls_state = 376
+			376 = { NOT = { has_state_flag = chromium_new_mexico_I_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+
+		cost = 0
+		days_remove = chromium_new_mexico_I_develop_duration
+
+		remove_effect = {
+			376 = {
+				set_state_flag = chromium_new_mexico_I_developed
+				add_resource = {
+					type = chromium
+					amount = 13
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_new_mexico_I_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_new_mexico_I_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_new_mexico_II_develop = {
+		icon = chromium
+
+		highlight_states = {state = 376}
+		available = {
+			has_tech = excavation_I
+			owns_state = 376
+			controls_state = 376
+			376 = {
+				state_infrastructure > 1
+				has_state_flag = chromium_new_mexico_I_developed
+			}
+		}
+		visible = {
+			owns_state = 376
+			controls_state = 376
+			376 = {
+				has_state_flag = chromium_new_mexico_I_developed
+				NOT = { has_state_flag = chromium_new_mexico_II_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+
+		cost = 0
+		days_remove = chromium_new_mexico_II_develop_duration
+
+		remove_effect = {
+			382 = {
+				set_state_flag = chromium_new_mexico_II_developed
+				add_resource = {
+					type = chromium
+					amount = 64
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierFour }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_new_mexico_I_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_new_mexico_I_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	steel_magma_I_develop = {
+
 		icon = steel
 
 		allowed = {
@@ -511,7 +818,7 @@ prospect_for_resources = {
 			377 = {
 				has_state_flag = steel_arizona_III_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_magma_I_developed
 						value = 5
 					}
@@ -567,11 +874,51 @@ prospect_for_resources = {
 			}
 		}
 	}
-
 ##### TEXAS #####
+	chromium_texas_develop = {
+		icon = chromium
 
-	petrochemicals_texas_I_develop = { 
-		
+		highlight_states = {state = 375}
+		available = {
+			has_tech = civil_engineering_III
+			owns_state = 375
+			controls_state = 375
+			375 = {state_infrastructure > 2}
+		}
+		visible = {
+			has_tech = civil_engineering_III
+			owns_state = 375
+			controls_state = 375
+			375 = { NOT = { has_state_flag = chromium_texas_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_texas_develop_duration
+
+		remove_effect = {
+			375 = {
+				set_state_flag = chromium_texas_developed
+				add_resource = {
+					type = chromium
+					amount = 4
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierOne }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_texas_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_texas_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+
+	petrochemicals_texas_I_develop = {
+
 		icon = resource
 
 		allowed = {
@@ -596,7 +943,7 @@ prospect_for_resources = {
 			controls_state = 375
 			375 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_texas_I_developed
 						value = 5
 					}
@@ -652,9 +999,9 @@ prospect_for_resources = {
 			}
 		}
 	}
-	
-	petrochemicals_texas_II_develop = { 
-		
+
+	petrochemicals_texas_II_develop = {
+
 		icon = oil
 
 		allowed = {
@@ -670,7 +1017,7 @@ prospect_for_resources = {
 			num_of_civilian_factories_available_for_projects > 6
 			owns_state = 375
 			controls_state = 375
-			
+
 			375 = {
 				state_infrastructure > 1
 				has_state_flag = petrochemicals_texas_I_developed
@@ -685,7 +1032,7 @@ prospect_for_resources = {
 				state_infrastructure > 1
 				has_state_flag = petrochemicals_texas_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_texas_II_developed
 						value = 5
 					}
@@ -741,8 +1088,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	petrochemicals_texas_III_develop = { 
-		
+	petrochemicals_texas_III_develop = {
+
 		icon = oil
 
 		allowed = {
@@ -757,7 +1104,7 @@ prospect_for_resources = {
 			has_tech = chemistry_II
 			owns_state = 375
 			controls_state = 375
-			
+
 			375 = {
 				state_infrastructure > 1
 				synthetic_refinery > 0
@@ -772,7 +1119,7 @@ prospect_for_resources = {
 			375 = {
 				has_state_flag = petrochemicals_texas_II_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_texas_III_developed
 						value = 5
 					}
@@ -828,8 +1175,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	petrochemicals_texas_IV_develop = { 
-		
+	petrochemicals_texas_IV_develop = {
+
 		icon = oil
 
 		allowed = {
@@ -844,7 +1191,7 @@ prospect_for_resources = {
 			has_tech = chemistry_II
 			owns_state = 375
 			controls_state = 375
-			
+
 			375 = {
 				state_infrastructure > 2
 				has_state_flag = petrochemicals_texas_III_developed
@@ -858,7 +1205,7 @@ prospect_for_resources = {
 			375 = {
 				has_state_flag = petrochemicals_texas_III_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_texas_IV_developed
 						value = 5
 					}
@@ -914,8 +1261,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	petrochemicals_texas_V_develop = { 
-		
+	petrochemicals_texas_V_develop = {
+
 		icon = oil
 
 		allowed = {
@@ -943,7 +1290,7 @@ prospect_for_resources = {
 			375 = {
 				has_state_flag = petrochemicals_texas_IV_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_texas_V_developed
 						value = 5
 					}
@@ -1001,8 +1348,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	steel_texas_I_develop = { 
-		
+	steel_texas_I_develop = {
+
 		icon = steel
 
 		allowed = {
@@ -1017,7 +1364,7 @@ prospect_for_resources = {
 			has_tech = excavation_II
 			owns_state = 375
 			controls_state = 375
-			
+
 			375 = {
 				state_infrastructure > 2
 				has_state_flag = petrochemicals_texas_I_developed
@@ -1031,7 +1378,7 @@ prospect_for_resources = {
 			375 = {
 				has_state_flag = petrochemicals_texas_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_texas_I_developed
 						value = 5
 					}
@@ -1088,8 +1435,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	steel_texas_II_develop = { 
-		
+	steel_texas_II_develop = {
+
 		icon = steel
 
 		allowed = {
@@ -1104,7 +1451,7 @@ prospect_for_resources = {
 			has_tech = excavation_III
 			owns_state = 375
 			controls_state = 375
-			
+
 			375 = {
 				state_infrastructure > 3
 				has_state_flag = steel_texas_I_developed
@@ -1118,7 +1465,7 @@ prospect_for_resources = {
 			375 = {
 				has_state_flag = steel_texas_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_texas_II_developed
 						value = 5
 					}
@@ -1175,8 +1522,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	aluminium_texas_I_develop = { 
-		
+	aluminium_texas_I_develop = {
+
 		icon = aluminium
 
 		allowed = {
@@ -1191,7 +1538,7 @@ prospect_for_resources = {
 			has_tech = excavation_II
 			owns_state = 375
 			controls_state = 375
-			
+
 			375 = {
 				state_infrastructure > 2
 				has_state_flag = steel_texas_I_developed
@@ -1205,7 +1552,7 @@ prospect_for_resources = {
 			375 = {
 				has_state_flag = steel_texas_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = aluminium_texas_I_developed
 						value = 5
 					}
@@ -1262,10 +1609,10 @@ prospect_for_resources = {
 			}
 		}
 	}
-	
+
 ##### CALIFORNIA #####
-	tungsten_california_I_develop = { 
-		
+	tungsten_california_I_develop = {
+
 		icon = tungsten
 
 		allowed = {
@@ -1292,7 +1639,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = petrochemicals_california_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = tungsten_california_I_developed
 						value = 5
 					}
@@ -1349,8 +1696,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	tungsten_california_II_develop = { 
-		
+	tungsten_california_II_develop = {
+
 		icon = resource
 
 		allowed = {
@@ -1379,7 +1726,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = tungsten_california_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = tungsten_california_II_developed
 						value = 5
 					}
@@ -1436,8 +1783,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	tungsten_california_III_develop = { 
-		
+	tungsten_california_III_develop = {
+
 		icon = resource
 
 		allowed = {
@@ -1466,7 +1813,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = tungsten_california_II_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = tungsten_california_III_developed
 						value = 5
 					}
@@ -1523,8 +1870,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	tungsten_california_IV_develop = { 
-		
+	tungsten_california_IV_develop = {
+
 		icon = resource
 
 		allowed = {
@@ -1553,7 +1900,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = tungsten_california_III_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = tungsten_california_IV_developed
 						value = 5
 					}
@@ -1610,8 +1957,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	tungsten_california_V_develop = { 
-		
+	tungsten_california_V_develop = {
+
 		icon = resource
 
 		allowed = {
@@ -1640,7 +1987,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = tungsten_california_IV_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = tungsten_california_V_developed
 						value = 5
 					}
@@ -1697,8 +2044,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	petrochemicals_california_I_develop = { 
-		
+	petrochemicals_california_I_develop = {
+
 		icon = resource
 
 		allowed = {
@@ -1723,7 +2070,7 @@ prospect_for_resources = {
 			controls_state = 378
 			378 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_california_I_developed
 						value = 5
 					}
@@ -1781,9 +2128,9 @@ prospect_for_resources = {
 			}
 		}
 	}
-	
-	petrochemicals_california_II_develop = { 
-		
+
+	petrochemicals_california_II_develop = {
+
 		icon = oil
 
 		allowed = {
@@ -1798,7 +2145,7 @@ prospect_for_resources = {
 			has_tech = chemistry_I
 			owns_state = 378
 			controls_state = 378
-			
+
 			378 = {
 				synthetic_refinery > 0
 				state_infrastructure > 1
@@ -1813,7 +2160,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = petrochemicals_california_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_california_II_developed
 						value = 5
 					}
@@ -1869,8 +2216,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	petrochemicals_california_III_develop = { 
-		
+	petrochemicals_california_III_develop = {
+
 		icon = oil
 
 		allowed = {
@@ -1885,7 +2232,7 @@ prospect_for_resources = {
 			has_tech = excavation_IV
 			owns_state = 378
 			controls_state = 378
-			
+
 			378 = {
 				state_infrastructure > 1
 				has_state_flag = petrochemicals_california_II_developed
@@ -1899,7 +2246,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = petrochemicals_california_II_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_california_III_developed
 						value = 5
 					}
@@ -1955,8 +2302,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	steel_california_I_develop = { 
-		
+	steel_california_I_develop = {
+
 		icon = resource
 
 		allowed = {
@@ -1984,7 +2331,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = petrochemicals_california_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_california_I_developed
 						value = 5
 					}
@@ -2040,8 +2387,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	aluminium_california_I_develop = { 
-		
+	aluminium_california_I_develop = {
+
 		icon = resource
 
 		allowed = {
@@ -2068,7 +2415,7 @@ prospect_for_resources = {
 			378 = {
 				has_state_flag = petrochemicals_california_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = aluminium_california_I_developed
 						value = 5
 					}
@@ -2125,8 +2472,8 @@ prospect_for_resources = {
 		}
 	}
 ##### NEVADA #####
-	steel_nevada_I_develop = { 
-		
+	steel_nevada_I_develop = {
+
 		icon = steel
 
 		allowed = {
@@ -2153,7 +2500,7 @@ prospect_for_resources = {
 			has_tech = excavation_I
 			379 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_nevada_I_developed
 						value = 5
 					}
@@ -2210,8 +2557,8 @@ prospect_for_resources = {
 		}
 	}
 ##### IDAHO #####
-	aluminium_idaho_I_develop = { 
-		
+	aluminium_idaho_I_develop = {
+
 		icon = aluminium
 
 		allowed = {
@@ -2235,7 +2582,7 @@ prospect_for_resources = {
 			controls_state = 387
 			387 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = aluminium_idaho_I_developed
 						value = 5
 					}
@@ -2291,9 +2638,228 @@ prospect_for_resources = {
 			}
 		}
 	}
+##### UTAH #####
+	chromium_utah_I_develop = {
+		icon = chromium
+
+		highlight_states = {state = 380}
+		available = {
+			has_tech = civil_engineering_I
+			owns_state = 380
+			controls_state = 380
+			380 = {state_infrastructure > 0}
+		}
+		visible = {
+			has_tech = civil_engineering_I
+			owns_state = 380
+			controls_state = 380
+			380 = { NOT = { has_state_flag = chromium_utah_I_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_utah_I_develop_duration
+
+		remove_effect = {
+			380 = {
+				set_state_flag = chromium_utah_I_developed
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_utah_I_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_utah_I_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_utah_II_develop = {
+		icon = chromium
+
+		highlight_states = {state = 380}
+		available = {
+			has_tech = excavation_I
+			owns_state = 380
+			controls_state = 380
+			380 = {
+				has_state_flag = chromium_utah_I_developed
+				state_infrastructure > 1
+			}
+		}
+		visible = {
+			has_tech = excavation_I
+			owns_state = 380
+			controls_state = 380
+			380 = {
+				has_state_flag = chromium_utah_I_developed
+				NOT = { has_state_flag = chromium_utah_II_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_utah_II_develop_duration
+
+		remove_effect = {
+			380 = {
+				set_state_flag = chromium_utah_II_developed
+				add_resource = {
+					type = chromium
+					amount = 40
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierFour }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_utah_II_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_utah_II_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+##### WASHINGTON #####
+	chromium_washington_develop = {
+		icon = chromium
+
+		highlight_states = {state = 386}
+		available = {
+			has_tech = excavation_I
+			owns_state = 386
+			controls_state = 386
+			386 = {state_infrastructure > 1}
+		}
+		visible = {
+			has_tech = excavation_I
+			owns_state = 386
+			controls_state = 386
+			386 = { NOT = { has_state_flag = chromium_washington_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_washington_develop_duration
+
+		remove_effect = {
+			386 = {
+				set_state_flag = chromium_washington_developed
+				add_resource = {
+					type = chromium
+					amount = 16
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_washington_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_washington_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
 ##### WYOMING #####
-	petrochemicals_wyoming_I_develop = { 
-		
+	chromium_wyoming_I_develop = {
+		icon = chromium
+
+		highlight_states = {state = 381}
+		available = {
+			has_tech = excavation_I
+			owns_state = 381
+			controls_state = 381
+			381 = {state_infrastructure > 1}
+		}
+		visible = {
+			has_tech = excavation_I
+			owns_state = 381
+			controls_state = 381
+			381 = { NOT = { has_state_flag = chromium_wyoming_I_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_wyoming_I_develop_duration
+
+		remove_effect = {
+			381 = {
+				set_state_flag = chromium_wyoming_I_developed
+				add_resource = {
+					type = chromium
+					amount = 24
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierThree }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_wyoming_I_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_wyoming_I_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	chromium_wyoming_II_develop = {
+		icon = chromium
+
+		highlight_states = {state = 381}
+		available = {
+			has_tech = civil_engineering_III
+			owns_state = 381
+			controls_state = 381
+			381 = {
+				has_state_flag = chromium_wyoming_I_developed
+				state_infrastructure > 2
+			}
+		}
+		visible = {
+			has_tech = civil_engineering_III
+			owns_state = 381
+			controls_state = 381
+			381 = {
+				has_state_flag = chromium_wyoming_I_developed
+				NOT = { has_state_flag = chromium_wyoming_II_developed }
+			}
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_wyoming_II_develop_duration
+
+		remove_effect = {
+			381 = {
+				set_state_flag = chromium_wyoming_II_developed
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_wyoming_II_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_wyoming_II_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
+	petrochemicals_wyoming_I_develop = {
+
 		icon = oil
 
 		allowed = {
@@ -2318,7 +2884,7 @@ prospect_for_resources = {
 			381 = {
 				state_infrastructure > 1
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_wyoming_I_developed
 						value = 5
 					}
@@ -2330,7 +2896,7 @@ prospect_for_resources = {
 
 		cost = 50
 		days_remove = petrochemicals_wyoming_I_develop_duration
-		
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -2376,7 +2942,7 @@ prospect_for_resources = {
 	}
 ##### NEBRASKA #####
 	tungsten_nebraska_I_develop = {
-		
+
 		icon = tungsten
 
 		allowed = {
@@ -2403,7 +2969,7 @@ prospect_for_resources = {
 			has_tech = materials_IV
 			384 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = tungsten_nebraska_I_developed
 						value = 5
 					}
@@ -2460,8 +3026,49 @@ prospect_for_resources = {
 		}
 	}
 ##### SOUTH DAKOTA #####
+	chromium_south_dakota_develop = {
+		icon = chromium
+
+		highlight_states = {state = 390}
+		available = {
+			has_tech = excavation_I
+			owns_state = 390
+			controls_state = 390
+			390 = {state_infrastructure > 1}
+		}
+		visible = {
+			has_tech = excavation_I
+			owns_state = 390
+			controls_state = 390
+			390 = { NOT = { has_state_flag = chromium_south_dakota_developed } }
+		}
+
+		ai_will_do = {factor = 1}
+		cost = 0
+		days_remove = chromium_south_dakota_develop_duration
+
+		remove_effect = {
+			390 = {
+				set_state_flag = chromium_south_dakota_developed
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { currentMoney = global.RGOTierTwo }
+
+			if = {
+				limit = {
+					check_variable = { var = chromium_south_dakota_develop_duration value = global.RGOConstructionLength compare = less_than }
+				}
+				set_variable = { var = chromium_south_dakota_develop_duration value = global.RGOConstructionLength }
+			}
+		}
+	}
 	tungsten_south_dakota_I_develop = {
-		
+
 		icon = tungsten
 
 		allowed = {
@@ -2485,7 +3092,7 @@ prospect_for_resources = {
 			controls_state = 390
 			390 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = tungsten_south_dakota_I_developed
 						value = 5
 					}
@@ -2543,7 +3150,7 @@ prospect_for_resources = {
 	}
 ##### KANSAS #####
 	petrochemicals_kansas_I_develop = {
-		
+
 		icon = oil
 
 		allowed = {
@@ -2569,7 +3176,7 @@ prospect_for_resources = {
 			has_tech = chemistry_III
 			383 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = petrochemicals_kansas_I_developed
 						value = 5
 					}
@@ -2627,7 +3234,7 @@ prospect_for_resources = {
 	}
 ##### PENNSYLVANIA #####
 	steel_pennsylvania_I_develop = {
-		
+
 		icon = resource
 
 		allowed = {
@@ -2653,7 +3260,7 @@ prospect_for_resources = {
 			controls_state = 360
 			360 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_pennsylvania_I_developed
 						value = 5
 					}
@@ -2711,7 +3318,7 @@ prospect_for_resources = {
 	}
 ##### PITTSBURGH QUESTLINE #####
 	metals_pittsburgh_I_develop = {
-		
+
 		icon = resource
 
 		allowed = {
@@ -2771,7 +3378,7 @@ prospect_for_resources = {
 				has_state_flag = steel_pennsylvania_I_developed
 				state_infrastructure > 4
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = metals_pittsburg_I_developed
 						value = 5
 					}
@@ -2828,7 +3435,7 @@ prospect_for_resources = {
 		}
 	}
 	metals_pittsburgh_ohio_develop = {
-		
+
 		icon = steel
 
 		allowed = {
@@ -2848,7 +3455,7 @@ prospect_for_resources = {
 			360 = {
 				has_state_flag = metals_pittsburg_I_developed
 			}
-			
+
 		}
 
 		visible = {
@@ -2913,9 +3520,9 @@ prospect_for_resources = {
 			}
 		}
 	}
-	
+
 	metals_pittsburgh_indiana_develop = {
-		
+
 		icon = aluminium
 
 		allowed = {
@@ -2935,7 +3542,7 @@ prospect_for_resources = {
 			360 = {
 				has_state_flag = metals_pittsburg_I_developed
 			}
-			
+
 		}
 
 		visible = {
@@ -3000,94 +3607,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	metals_pittsburgh_kentucky_develop = {
-		
-		icon = chromium
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			state = 369
-		}
-
-		available = {
-			owns_state = 360
-			controls_state = 360
-			369 = {
-				state_infrastructure > 4
-			}
-			360 = {
-				has_state_flag = metals_pittsburg_I_developed
-			}
-			
-		}
-
-		visible = {
-			owns_state = 360
-			controls_state = 360
-			360 = {
-				has_state_flag = metals_pittsburg_I_developed
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 20
-		days_remove = metals_pittsburgh_kentucky_develop_duration
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		remove_effect = {
-			add_to_variable = { var = metals_pittsburgh_kentucky_develop_duration value = global.RGOConstructionLength }
-			369 = {
-				if = {
-					limit = {
-						NOT = {
-							has_state_flag = metals_pittsburgh_kentucky_developed
-						}
-					}
-					set_state_flag = {
-						flag = metals_pittsburgh_kentucky_developed
-						value = 1
-					}
-				}
-				else = {
-					modify_state_flag = {
-						flag = metals_pittsburgh_kentucky_developed
-						value = 1
-					}
-				}
-			}
-			369 = {
-				add_resource = {
-					type = chromium
-					amount = 12
-				}
-			}
-			360 = {
-				add_resource = {
-					type = steel
-					amount = 6
-				}
-			}
-		}
-
-		complete_effect = {
-			subtract_from_variable = { currentMoney = global.RGOTierThree }
-			if = {
-				limit = {
-					check_variable = { var = metals_pittsburgh_kentucky_develop_duration value = global.RGOConstructionLength compare = less_than }
-				}
-				set_variable = { var = metals_pittsburgh_kentucky_develop_duration value = global.RGOConstructionLength }
-			}
-		}
-	}
 	metals_pittsburgh_tennessee_develop = {
-		
+
 		icon = steel
 
 		allowed = {
@@ -3107,7 +3628,7 @@ prospect_for_resources = {
 			360 = {
 				has_state_flag = metals_pittsburg_I_developed
 			}
-			
+
 		}
 
 		visible = {
@@ -3173,7 +3694,7 @@ prospect_for_resources = {
 		}
 	}
 	metals_pittsburgh_georgia_develop = {
-		
+
 		icon = steel
 
 		allowed = {
@@ -3193,7 +3714,7 @@ prospect_for_resources = {
 			360 = {
 				has_state_flag = metals_pittsburg_I_developed
 			}
-			
+
 		}
 
 		visible = {
@@ -3259,7 +3780,7 @@ prospect_for_resources = {
 		}
 	}
 	metals_pittsburgh_alabama_develop = {
-		
+
 		icon = aluminium
 
 		allowed = {
@@ -3279,7 +3800,7 @@ prospect_for_resources = {
 			360 = {
 				has_state_flag = metals_pittsburg_I_developed
 			}
-			
+
 		}
 
 		visible = {
@@ -3345,7 +3866,7 @@ prospect_for_resources = {
 		}
 	}
 	metals_pittsburgh_michigan_develop = {
-		
+
 		icon = steel
 
 		allowed = {
@@ -3372,7 +3893,7 @@ prospect_for_resources = {
 			controls_state = 393
 			393 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = metals_pittsburgh_michigan_developed
 						value = 5
 					}
@@ -3438,7 +3959,7 @@ prospect_for_resources = {
 		}
 	}
 	metals_pittsburgh_newyork_develop = {
-		
+
 		icon = aluminium
 
 		allowed = {
@@ -3465,7 +3986,7 @@ prospect_for_resources = {
 			controls_state = 358
 			358 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = metals_pittsburgh_newyork_developed
 						value = 5
 					}
@@ -3531,7 +4052,7 @@ prospect_for_resources = {
 		}
 	}
 	metals_pittsburgh_maryland_develop = {
-		
+
 		icon = oil
 
 		allowed = {
@@ -3558,7 +4079,7 @@ prospect_for_resources = {
 			controls_state = 361
 			361 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = metals_pittsburgh_maryland_developed
 						value = 5
 					}
@@ -3624,7 +4145,7 @@ prospect_for_resources = {
 		}
 	}
 	metals_pittsburgh_virginia_develop = {
-		
+
 		icon = oil
 
 		allowed = {
@@ -3651,7 +4172,7 @@ prospect_for_resources = {
 			controls_state = 362
 			362 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = metals_pittsburgh_virginia_developed
 						value = 5
 					}
@@ -3717,7 +4238,7 @@ prospect_for_resources = {
 		}
 	}
 	metals_pittsburgh_westvirginia_develop = {
-		
+
 		icon = oil
 
 		allowed = {
@@ -3744,7 +4265,7 @@ prospect_for_resources = {
 			controls_state = 859
 			859 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = metals_pittsburgh_westvirginia_developed
 						value = 5
 					}
@@ -3811,7 +4332,7 @@ prospect_for_resources = {
 	}
 ##### FLORIDA #####
 	steel_florida_I_develop = {
-		
+
 		icon = resource
 
 		allowed = {
@@ -3837,7 +4358,7 @@ prospect_for_resources = {
 			has_tech = excavation_II
 			366 = {
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_florida_I_developed
 						value = 5
 					}
@@ -3894,7 +4415,7 @@ prospect_for_resources = {
 		}
 	}
 	steel_florida_II_develop = {
-		
+
 		icon = steel
 
 		allowed = {
@@ -3923,7 +4444,7 @@ prospect_for_resources = {
 			366 = {
 				has_state_flag = steel_florida_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = steel_florida_II_developed
 						value = 5
 					}
@@ -3980,7 +4501,7 @@ prospect_for_resources = {
 		}
 	}
 	aluminium_florida_I_develop = {
-		
+
 		icon = aluminium
 
 		allowed = {
@@ -4009,7 +4530,7 @@ prospect_for_resources = {
 			366 = {
 				has_state_flag = steel_florida_I_developed
 				NOT = {
-					has_state_flag = { 
+					has_state_flag = {
 						flag = aluminium_florida_I_developed
 						value = 5
 					}
@@ -4065,24 +4586,24 @@ prospect_for_resources = {
 			}
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
