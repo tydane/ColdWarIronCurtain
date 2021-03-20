@@ -1,0 +1,43 @@
+prospect_for_resources = {
+
+#############################################################
+################### AFRICA ##################################
+#############################################################
+
+##### ALGERIA #####
+
+##### BOTSWANA #####
+
+##### CENTRAL AFRICAN REPUBLIC #####
+
+##### CHAD #####
+
+##### REPUBLIC OF THE CONGO #####
+
+##### DEMOCRATIC REPUBLIC OF THE CONGO #####
+
+##### EGYPT #####
+
+##### GABON #####
+
+##### MADAGASCAR #####
+
+##### MALAWI #####
+
+##### MALI #####
+
+##### MAURITANIA #####
+
+##### NAMIBIA #####
+
+##### NIGER #####
+
+##### SOMALIA #####
+
+##### SOUTH AFRICA #####
+
+##### TANZANIA #####
+
+##### ZAMBIA #####
+
+}
